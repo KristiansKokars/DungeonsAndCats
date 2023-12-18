@@ -12,6 +12,7 @@
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   --font-heading: "Bitter";
+  --text-gray: #dddddd;
   --text-light-blue: #70c1ff;
   --background-color: #262c3a;
   --table-alternating-color: #183144;
@@ -43,6 +44,18 @@ h3 {
   color: var(--text-light-blue);
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+p {
+  color: var(--text-gray);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+li {
+  color: var(--text-gray);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 nav > ul {
@@ -189,16 +202,16 @@ img {
   margin-left: auto;
 }
 
-.flexbox-columns > article {
-  flex: 2;
-}
-
-.flexbox-columns > aside {
-  flex: 1;
-}
-
 .role-list {
-  list-style: decimal inside;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.second-title {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 400px) {
@@ -210,7 +223,7 @@ img {
 
 @media screen and (min-width: 992px) {
   .container {
-    max-width: 992px;
+    max-width: 768px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -218,5 +231,13 @@ img {
   .related-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .flexbox-columns > article {
+    flex: 2;
+  }
+
+  .flexbox-columns > aside {
+    flex: 1;
   }
 }
